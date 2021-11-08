@@ -1,6 +1,8 @@
-import { Route, Link, Routes } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 import Home from "./Home";
 import Resources from "./Resources";
+import FunctionalComponentDemo from "../concepts/FunctionalComponents/FunctionalComponentDemo";
+import JSXRules from "../concepts/FunctionalComponents/JSXRules";
 
 const Sidebar = () => {
   return (
@@ -16,10 +18,13 @@ const Sidebar = () => {
           <li>
             <Link to="/functionalcomponent">Functional Component</Link>
           </li>
+          <li>
+            <Link to ="/jsxrules">JSX RULES</Link>
+          </li>
         </ul>
       </div>
       <div className="sidebar-route">
-        <Routes>
+        <Switch>
           <Route exact path="/home">
             <Home />
           </Route>
@@ -29,7 +34,13 @@ const Sidebar = () => {
           <Route exact path="/">
             <Home />
           </Route>
-        </Routes>
+          <Route exact path='/functionalcomponent'>
+            <FunctionalComponentDemo />
+          </Route>
+          <Route exact path='/jsxrules'>
+            <JSXRules />
+          </Route>
+        </Switch>
       </div>
     </div>
   );
