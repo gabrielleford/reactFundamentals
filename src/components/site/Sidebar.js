@@ -3,6 +3,7 @@ import Home from "./Home";
 import Resources from "./Resources";
 import FunctionalComponentDemo from "../concepts/FunctionalComponents/FunctionalComponentDemo";
 import JSXRules from "../concepts/FunctionalComponents/JSXRules";
+import State from "../concepts/FunctionalComponents/State";
 
 const Sidebar = () => {
   return (
@@ -19,7 +20,10 @@ const Sidebar = () => {
             <Link to="/functionalcomponent">Functional Component</Link>
           </li>
           <li>
-            <Link to ="/jsxrules">JSX RULES</Link>
+            <Link to="/jsxrules">JSX RULES</Link>
+          </li>
+          <li>
+            <Link to="/state">State</Link>
           </li>
         </ul>
       </div>
@@ -39,6 +43,9 @@ const Sidebar = () => {
           </Route>
           <Route exact path='/jsxrules'>
             <JSXRules />
+          </Route>
+          <Route exact path='/state'>
+            <State />
           </Route>
         </Switch>
       </div>
