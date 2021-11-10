@@ -7,6 +7,7 @@ import State from "../concepts/FunctionalComponents/State";
 import Effects from "../concepts/FunctionalComponents/Effects";
 import PropsDemo from "../concepts/FunctionalComponents/PropsDemo";
 import Hooks from "../concepts/FunctionalComponents/Hooks";
+import TimePiecesApp from "../apps/timer-apps/TimePiecesApp";
 
 const Sidebar = () => {
   return (
@@ -35,7 +36,10 @@ const Sidebar = () => {
             <Link to="/propsdemo">Props Demo</Link>
           </li>
           <li>
-            <Link to='/hooks'>Hooks</Link>
+            <Link to="/hooks">Hooks</Link>
+          </li>
+          <li>
+            <Link to="/timers">Timers</Link>
           </li>
         </ul>
       </div>
@@ -67,6 +71,9 @@ const Sidebar = () => {
           </Route>
           <Route exact path="/hooks">
             <Hooks />
+          </Route>
+          <Route exact path="/timers">
+            <TimePiecesApp />
           </Route>
         </Switch>
       </div>
