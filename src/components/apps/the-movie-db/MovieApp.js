@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MovieAppDisplay from "./MovieAppDisplay";
 
 const key = '69bea645e01f12cc98841d2963d5638b';
 
@@ -30,6 +31,7 @@ const MovieApp = () => {
             <div className='mainDiv'>
                 <input value={query} onChange={(e) => setQuery(e.target.value)} />
                 <button onClick={fetcher}>Click for Movie Pic Search</button>
+                {!result || !result.poster_path ? null : <MovieAppDisplay movie={result} />}
             </div>
         </div>
     );
