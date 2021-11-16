@@ -10,6 +10,7 @@ import Hooks from "../concepts/FunctionalComponents/Hooks";
 import TimePiecesApp from "../apps/timer-apps/TimePiecesApp";
 import NytApp from "../apps/nyt-app/NytApp";
 import MovieApp from "../apps/the-movie-db/MovieApp";
+import Bitcoin from "../apps/bitcoin-api-app/Bitcoin";
 
 const Sidebar = () => {
   return (
@@ -48,6 +49,9 @@ const Sidebar = () => {
           </li>
           <li>
             <Link to="/movieapp">Movie App</Link>
+          </li>
+          <li>
+            <Link to="/bitcoinapp">Bitcoin API App</Link>
           </li>
         </ul>
       </div>
@@ -88,6 +92,9 @@ const Sidebar = () => {
           </Route>
           <Route exact path="/movieapp">
             <MovieApp />
+          </Route>
+          <Route exact path="/bitcoinapp">
+            <Bitcoin />
           </Route>
         </Switch>
       </div>
